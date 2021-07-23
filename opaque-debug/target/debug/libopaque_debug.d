@@ -1,1 +1,1 @@
-/home/helin123/Tss/opaque-debug/target/debug/libopaque_debug.rlib: /home/helin123/Tss/opaque-debug/src/lib.rs
+/root/tkms/TSS/opaque-debug/target/debug/libopaque_debug.rlib: /root/tkms/TSS/opaque-debug/src/lib.rs
