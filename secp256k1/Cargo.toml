@@ -17,9 +17,10 @@ autoexamples = false # Remove when edition 2018 https://github.com/rust-lang/car
 features = [ "rand", "rand-std", "serde", "recovery" ]
 
 [features]
-unstable = ["recovery", "rand-std"]
-default = ["std"]
+default = [] 
+mesalock_sgx = ["sgx_tstd"]
 std = ["secp256k1-sys/std"]
+unstable = ["recovery", "rand-std"]
 # allow use of Secp256k1::new and related API that requires an allocator
 alloc = []
 rand-std = ["rand/std"]
@@ -32,19 +33,19 @@ global-context-less-secure = []
 sgx_tstd = { rev = "v1.1.3", git = "https://github.com/apache/teaclave-sgx-sdk.git", optional = true }
 secp256k1-sys = { version = "0.4.1", default-features = false, path = "./secp256k1-sys" }
 bitcoin_hashes = { version = "0.9", optional = true }
-rand = { version = "0.6", default-features = false, optional = true }
-serde = { version = "1.0", default-features = false, optional = true }
+rand = {version = "0.7.3", default-features = false, git="https://github.com/mesalock-linux/rand-sgx.git"}
+serde = { version = "1.0", default-features = false, optional = true,git="https://github.com/mesalock-linux/serde-sgx.git" }
 
 
 [dev-dependencies]
-rand = "0.6"
+rand = {version = "0.7.3",git="https://github.com/mesalock-linux/rand-sgx.git"}
 rand_core = "0.4"
 serde_test = "1.0"
 bitcoin_hashes = "0.9"
 
-[target.wasm32-unknown-unknown.dev-dependencies]
-wasm-bindgen-test = "0.3"
-rand = { version = "0.6", features = ["wasm-bindgen"] }
+#[target.wasm32-unknown-unknown.dev-dependencies]
+#wasm-bindgen-test = "0.3"
+#rand = { branch = "master", features = ["wasm-bindgen"], git="https://github.com/mesalock-linux/rand-sgx.git"}
 
 
 [[example]]
