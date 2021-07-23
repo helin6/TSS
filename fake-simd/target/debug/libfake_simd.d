@@ -1,1 +1,1 @@
-/home/helin123/Tss/fake-simd/target/debug/libfake_simd.rlib: /home/helin123/Tss/fake-simd/src/lib.rs
+/root/tkms/TSS/fake-simd/target/debug/libfake_simd.rlib: /root/tkms/TSS/fake-simd/src/lib.rs

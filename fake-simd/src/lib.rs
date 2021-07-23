@@ -1,5 +1,6 @@
 #![no_std]
-#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)] #![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
+#![cfg_attr(all(feature = "mesalock_sgx", not(target_env = "sgx")), no_std)] 
+#![cfg_attr(all(target_env = "sgx", target_vendor = "mesalock"), feature(rustc_private))]
 use core::ops::{Add, BitAnd, BitOr, BitXor, Shl, Shr, Sub};
 
 #[derive(Clone, Copy, PartialEq, Eq)]
