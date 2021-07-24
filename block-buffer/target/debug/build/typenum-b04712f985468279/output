@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/root/tkms/TSS/block-buffer/target/debug/build/typenum-b04712f985468279/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/root/tkms/TSS/block-buffer/target/debug/build/typenum-b04712f985468279/out/op.rs
